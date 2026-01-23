@@ -1,4 +1,4 @@
-
+import logo from '../images/hyd-logo-transparent.png';
 import React from 'react';
 import { LanguageType } from '../App';
 
@@ -7,7 +7,7 @@ interface AboutProps {
   lang: LanguageType;
 }
 
-const LOGO_URL = "https://images.unsplash.com/photo-1599305096909-e8b5b1262819?auto=format&fit=crop&q=80&w=200";
+const LOGO_URL = logo;
 
 const About: React.FC<AboutProps> = ({ onNavigate, lang }) => {
   const t = {

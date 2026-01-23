@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X} from 'lucide-react';
 import { ViewType, LanguageType } from '../App';
+import logo from '../images/hyd-logo-transparent.png';
+
 
 interface NavbarProps {
   currentView: ViewType;
@@ -10,7 +12,7 @@ interface NavbarProps {
   setLang: (lang: LanguageType) => void;
 }
 
-const LOGO_URL = "https://images.unsplash.com/photo-1599305096909-e8b5b1262819?auto=format&fit=crop&q=80&w=200";
+const LOGO_URL = logo;
 
 const Navbar: React.FC<NavbarProps> = ({ currentView, setView, lang, setLang }) => {
   const [isScrolled, setIsScrolled] = useState(false);

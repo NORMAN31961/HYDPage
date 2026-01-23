@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         cta: "EXPLORAR PRODUCTOS"
       },
       {
-        image: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&q=80&w=2070",
+        image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=2070",
         title: "ARTE Y\nTRADICIÓN\nVIVA",
         highlightWord: "TRADICIÓN",
         subtitle: "Piezas únicas que narran historias milenarias de nuestras comunidades aliadas.",
@@ -49,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         cta: "EXPLORE PRODUCTS"
       },
       {
-        image: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&q=80&w=2070",
+        image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=2070",
         title: "ART AND\nLIVING\nTRADITION",
         highlightWord: "TRADITION",
         subtitle: "Unique pieces telling millenary stories from our allied communities.",

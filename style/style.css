@@ -1,0 +1,101 @@
+:root {
+    /* ===== COLORES DE MARCA ===== */
+    --chat--color--primary: #0b1120;            /* Azul marino corporativo */
+    --chat--color--primary-shade-50: #111827;
+    --chat--color--primary--shade-100: #020617;
+  
+    --chat--color--secondary: #0ea5e9;          /* Azul acento moderno */
+    --chat--color-secondary-shade-50: #0284c7;
+  
+    --chat--color-white: #ffffff;
+    --chat--color-light: #f8fafc;
+    --chat--color-light-shade-50: #e5e7eb;
+    --chat--color-light-shade-100: #cbd5e1;
+  
+    --chat--color-medium: #d1d5db;
+    --chat--color-dark: #020617;
+    --chat--color-disabled: #9ca3af;
+    --chat--color-typing: #334155;
+  
+    /* ===== ESPACIADO Y FORMA ===== */
+    --chat--spacing: 1rem;
+    --chat--border-radius: .5rem;
+    --chat--transition-duration: .15s;
+  
+    /* ===== FUENTE CORPORATIVA ===== */
+    --chat--font-family: 'Montserrat', -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  
+    /* ===== VENTANA ===== */
+    --chat--window--width: 380px;
+    --chat--window--height: 600px;
+    --chat--window--bottom: 1.25rem;
+    --chat--window--right: 1.25rem;
+    --chat--window--z-index: 9999;
+    --chat--window--border: 1px solid var(--chat--color-light-shade-50);
+    --chat--window--border-radius: .75rem;
+    --chat--window--margin-bottom: var(--chat--spacing);
+  
+    /* ===== HEADER ===== */
+    --chat--header--padding: 1rem;
+    --chat--header--background: linear-gradient(
+      135deg,
+      #020617,
+      #0b1120
+    );
+    --chat--header--color: var(--chat--color-white);
+  
+    --chat--heading--font-size: 1.2rem;
+    --chat--subtitle--font-size: .85rem;
+    --chat--subtitle--line-height: 1.4;
+  
+    /* ===== MENSAJES ===== */
+    --chat--message--font-size: .95rem;
+    --chat--message--padding: .75rem 1rem;
+    --chat--message--border-radius: .75rem;
+    --chat--message-line-height: 1.5;
+    --chat--message--margin-bottom: .75rem;
+  
+    /* Bot */
+    --chat--message--bot--background: var(--chat--color-white);
+    --chat--message--bot--color: #020617;
+    --chat--message--bot--border: 1px solid var(--chat--color-light-shade-50);
+  
+    /* Usuario */
+    --chat--message--user--background: var(--chat--color--secondary);
+    --chat--message--user--color: var(--chat--color-white);
+    --chat--message--user--border: none;
+  
+    /* ===== LISTA ===== */
+    --chat--messages-list--padding: 1rem;
+  
+    /* ===== BOTÓN FLOTANTE ===== */
+    --chat--toggle--size: 5rem;
+    --chat--toggle--border-radius: 50%;
+    --chat--toggle--background: var(--chat--color--primary);
+    --chat--toggle--hover--background: var(--chat--color--primary-shade-50);
+    --chat--toggle--active--background: var(--chat--color--primary--shade-100);
+    --chat--toggle--color: var(--chat--color-white);
+  
+    /* ===== INPUT ===== */
+    --chat--textarea--height: 52px;
+    --chat--input--padding: .75rem;
+    --chat--input--background: var(--chat--color-white);
+    --chat--input--text-color: #020617;
+    --chat--input--border: 1px solid var(--chat--color-light-shade-50);
+    --chat--input--border-radius: .5rem;
+  
+    /* ===== BOTONES ===== */
+    --chat--button--background: var(--chat--color--primary);
+    --chat--button--color: var(--chat--color-white);
+    --chat--button--border-radius: .5rem;
+  
+    --chat--input--send--button--background: transparent;
+    --chat--input--send--button--color: var(--chat--color--secondary);
+    --chat--input--send--button--color-hover: var(--chat--color-secondary-shade-50);
+  
+    /* ===== FOOTER ===== */
+    --chat--footer--background: var(--chat--color-light);
+    --chat--footer--color: #020617;
+  }
+  

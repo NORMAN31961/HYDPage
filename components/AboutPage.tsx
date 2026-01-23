@@ -1,4 +1,4 @@
-
+import logo from '../images/hyd-logo-transparent.png';
 import React from 'react';
 import { Target, Eye, Heart, Shield, Sparkles, Users } from 'lucide-react';
 import { LanguageType } from '../App';
@@ -8,7 +8,7 @@ interface AboutPageProps {
   onNavigate?: () => void;
 }
 
-const LOGO_URL = "https://images.unsplash.com/photo-1599305096909-e8b5b1262819?auto=format&fit=crop&q=80&w=600";
+const LOGO_URL = logo;
 
 const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
   const t = {
@@ -19,9 +19,9 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       p1: 'H&D Alianzas (HOPE AND DREAMS) fue fundada en 2016 por dos emprendedores colombo-americanos apasionados por empoderar a comunidades vulnerables ricas en cultura y recursos. Hemos establecido una asociación estratégica con la Comunidad Indígena Umbre Guaquemarae y la Fundación Arropame.',
       p2: 'Nuestras alianzas nos permiten ofrecer productos de alta calidad, incluyendo café colombiano premium y artículos artesanales elaborados con amor por mujeres emprendedoras.',
       missionTitle: 'Misión',
-      missionText: 'Empoderar a comunidades vulnerables promoviendo su patrimonio cultural y recursos, proporcionando herramientas para competir globalmente y elevar la economía local.',
+      missionText: 'Nuestra misión es empoderar a las comunidades vulnerables de Colombia mediante la promoción y celebración de su rico patrimonio cultural y sus valiosos recursos. A través de alianzas estratégicas, buscamos brindarles las herramientas y oportunidades necesarias para producir productos de alta calidad que puedan competir en el mercado internacional. Al apoyar el desarrollo sostenible de las pequeñas y medianas empresas, no solo contribuimos a impulsar las economías locales, sino también a la preservación de las tradiciones y prácticas únicas que definen a estas comunidades. Juntos, podemos crear un futuro más prometedor que honre tanto a la gente como a la tierra de Colombia, a la vez que fomentamos las conexiones globales.',
       visionTitle: 'Visión',
-      visionText: 'Ser líderes globales en la promoción de la cultura colombiana, reconocidos por la calidad, inclusión social y sostenibilidad de cada proyecto.',
+      visionText: 'Nuestra visión es convertirnos en una empresa líder en la promoción global de la cultura y los productos colombianos. Nos esforzamos por ser reconocidos no solo por la calidad y la riqueza de nuestra oferta, sino también por nuestro firme compromiso con la inclusión social y la sostenibilidad. Al centrarnos en el empoderamiento de las comunidades marginadas, buscamos crear oportunidades y apoyar a quienes a menudo son ignorados, garantizando que nuestros esfuerzos generen un impacto positivo significativo y duradero tanto en la economía colombiana como en la sociedad en su conjunto. A través de nuestras iniciativas, creemos que podemos ayudar a mostrar la belleza del patrimonio colombiano, a la vez que fomentamos el crecimiento económico y la equidad social.',
       valuesTitle: 'Nuestros Valores',
       values: [
         { icon: <Heart size={24} />, title: 'Inclusión', desc: 'Damos voz a quienes son ignorados.' },
@@ -40,9 +40,9 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       p1: 'H&D Alianzas (HOPE AND DREAMS) was founded in 2016 by two Colombian-American entrepreneurs passionate about empowering vulnerable communities rich in culture and resources. We’ve established strategic partnerships with the Umbre Guaquemarae Indigenous Community and Fundación Arropame.',
       p2: 'Our alliances enable us to offer high-quality products, including premium Colombian coffee and artisanal goods crafted with love by women entrepreneurs.',
       missionTitle: 'Mission',
-      missionText: 'To empower vulnerable communities by promoting their cultural heritage and resources, providing tools to compete globally and uplift local economies.',
+      missionText: 'Our mission is to empower vulnerable communities in Colombia by promoting and celebrating their rich cultural heritage and valuable resources. Through strategic partnerships, we aim to provide these communities with the tools and opportunities needed to produce high-quality products that can compete in the international market. By supporting the sustainable development of small and medium-sized businesses, we not only help uplift local economies but also contribute to the preservation of unique traditions and practices that define these communities. Together, we can create a brighter future that honors both the people and the land of Colombia while fostering global connections.',
       visionTitle: 'Vision',
-      visionText: 'To be global leaders in promoting Colombian culture, recognized for quality, social inclusion, and sustainability in every project.',
+      visionText: 'Our vision is to become a leading company in the global promotion of Colombian culture and products. We strive to be recognized not only for the quality and richness of our offerings but also for our unwavering commitment to social inclusion and sustainability. By focusing on empowering marginalized communities, we aim to create opportunities and uplift those who are often overlooked, ensuring that our efforts generate a significant and lasting positive impact on both Colombia economy and society as a whole. Through our initiatives, we believe that we can help showcase the beauty of Colombian heritage while fostering economic growth and social equity.',
       valuesTitle: 'Our Values',
       values: [
         { icon: <Heart size={24} />, title: 'Inclusion', desc: 'We give a voice to those overlooked.' },
