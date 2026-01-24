@@ -32,8 +32,8 @@ const Collection: React.FC<CollectionProps> = ({ onNavigate, lang }) => {
   }[lang];
 
   const products = [
-    { title: t.coffee, description: t.coffeeDesc, image: 'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?auto=format&fit=crop&q=80&w=800' },
-    { title: t.crafts, description: t.craftsDesc, image: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=800' }
+    { title: t.coffee, description: t.coffeeDesc, image: '../images/cafe2.jpg' },
+    { title: t.crafts, description: t.craftsDesc, image: '../images/artesania2.jpg' }
   ];
 
   return (

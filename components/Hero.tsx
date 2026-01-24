@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   const slides = {
     es: [
       {
-        image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=2070",
+        image: "../images/home2.jpg",
         title: "TU MEJOR\nALIADO\nCOMERCIAL",
         highlightWord: "ALIADO",
         subtitle: "Conectamos la riqueza de Colombia con el mundo. Exportación premium de café, artesanías únicas y cultura ancestral.",
@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         cta: "EXPLORAR PRODUCTOS"
       },
       {
-        image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=2070",
+        image: "../images/home3.jpg",
         title: "ARTE Y\nTRADICIÓN\nVIVA",
         highlightWord: "TRADICIÓN",
         subtitle: "Piezas únicas que narran historias milenarias de nuestras comunidades aliadas.",
@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         cta: "EXPLORAR PRODUCTOS"
       },
       {
-        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2070",
+        image: "../images/home1.jpg",
         title: "CALIDAD EN\nCADA\nGRANO",
         highlightWord: "GRANO",
         subtitle: "Selección rigurosa de café pergamino seco con los más altos estándares de exportación.",
@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
     ],
     en: [
       {
-        image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=2070",
+        image: "../images/home2.jpg",
         title: "YOUR BEST\nBUSINESS\nALLY",
         highlightWord: "ALLY",
         subtitle: "Connecting Colombia's wealth with the world. Premium export of coffee, unique crafts, and ancestral culture.",
@@ -49,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         cta: "EXPLORE PRODUCTS"
       },
       {
-        image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=2070",
+        image: "../images/home3.jpg",
         title: "ART AND\nLIVING\nTRADITION",
         highlightWord: "TRADITION",
         subtitle: "Unique pieces telling millenary stories from our allied communities.",
@@ -57,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         cta: "EXPLORE PRODUCTS"
       },
       {
-        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2070",
+        image: "../images/home1.jpg",
         title: "QUALITY IN\nEVERY\nBEAN",
         highlightWord: "BEAN",
         subtitle: "Rigorous selection of dry parchment coffee with the highest export standards.",

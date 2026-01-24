@@ -57,7 +57,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       <header className="relative h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2070" 
+            src="../images/banner-cafe.jpg" 
             alt="Coffee farm landscape" 
             className="w-full h-full object-cover animate-subtle-scale"
           />
@@ -99,7 +99,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
           </div>
           <div className="relative group">
             <img 
-              src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=1200" 
+              src="../images/cafe.jpg"
               alt="Premium coffee beans" 
               className="rounded-[2.5rem] shadow-2xl object-cover h-[400px] w-full transition-all duration-700 group-hover:rotate-1"
             />
@@ -109,7 +109,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative group">
             <img 
-              src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=1200" 
+              src="../images/artesanias.jpg"
               alt="Indigenous crafts" 
               className="rounded-[2.5rem] shadow-2xl object-cover h-[400px] w-full transition-all duration-700 group-hover:-rotate-1"
             />
@@ -144,6 +144,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
             <a 
               href={pdfLink}
               download="Catalogo_HD_Alianzas.pdf"
+              target='blank'
               className="group relative flex items-center gap-4 px-12 py-6 bg-primary hover:bg-primary-dark text-white font-bold rounded-2xl shadow-2xl shadow-primary/40 transition-all transform hover:-translate-y-1 active:scale-95 text-lg"
             >
               <Download size={24} className="group-hover:animate-bounce" />
