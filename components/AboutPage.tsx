@@ -1,4 +1,4 @@
-import logo from '../images/hyd-logo-transparent.png';
+
 import React from 'react';
 import { Target, Eye, Heart, Shield, Sparkles, Users } from 'lucide-react';
 import { LanguageType } from '../App';
@@ -8,7 +8,7 @@ interface AboutPageProps {
   onNavigate?: () => void;
 }
 
-const LOGO_URL = logo;
+
 
 const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
   const t = {
@@ -97,7 +97,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
 
           <div className="w-full lg:w-1/2 space-y-8 animate-fade-right">
             <div className="w-20 h-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center justify-center mb-4">
-              <img src={LOGO_URL} alt="Logo" className="w-full h-full object-contain" />
+              <img src='../public/hyd-logo-transparent.png' alt="Logo" className="w-full h-full object-contain" />
             </div>
             <h2 className="text-3xl md:text-4xl font-sans font-bold text-slate-900 leading-tight">
               Hope and Dreams: <br />
