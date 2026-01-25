@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, Download, Coffee, Palette, FileDown } from 'lucide-react';
+import { Download, Coffee, Palette, FileDown } from 'lucide-react';
 import { LanguageType } from '../App';
 
 interface ProductsPageProps {
