@@ -9,7 +9,9 @@ interface ProductsPageProps {
 }
 
 const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
-  const pdfLink = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"; 
+  const pdfLink = "https://drive.google.com/file/d/1FNpF2SRiI8pN79ngmiYIuh7pGqSmFMY8/view?usp=drive_link"; 
+  const pdf_Coffee = "https://drive.google.com/file/d/1XpEp7LAeWeEGq4jzmgWeACXPq4v6Pmav/view?usp=sharing"; 
+  const pdf_Art = "https://drive.google.com/file/d/1FNpF2SRiI8pN79ngmiYIuh7pGqSmFMY8/view?usp=drive_link"; 
 
   const t = {
     es: {
@@ -29,7 +31,9 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       preview: 'VISTA PREVIA',
       ctaTitle: '¿Busca un producto a medida?',
       ctaDesc: 'Si requiere una ficha técnica específica o personalización de marca, contáctenos directamente.',
-      ctaBtn: 'HABLAR CON UN ASESOR COMERCIAL'
+      ctaBtn: 'HABLAR CON UN ASESOR COMERCIAL',
+      pdf_Coffee: 'MAS INFORMACIÓN',
+      pdf_Art: 'MAS INFORMACIÓN'
     },
     en: {
       tag: 'EXCLUSIVE PORTFOLIO',
@@ -48,7 +52,9 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       preview: 'PREVIEW',
       ctaTitle: 'Looking for a custom product?',
       ctaDesc: 'If you require a specific data sheet or brand customization, contact us directly.',
-      ctaBtn: 'TALK TO A SALES ADVISOR'
+      ctaBtn: 'TALK TO A SALES ADVISOR',
+      pdf_Coffee: 'MORE INFORMATION',
+      pdf_Art: 'MORE INFORMATION'
     }
   }[lang];
 
@@ -96,6 +102,16 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
                 </li>
               ))}
             </ul>
+
+            <a 
+              href={pdf_Coffee}
+              target='blank'
+              className="inline-flex w-fit group relative items-center gap-3 px-6 py-5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-2xl shadow-primary/40 transition-all transform hover:-translate-y-1 active:scale-95 text-base "
+            >
+              <Download size={24} className="group-hover:animate-bounce" />
+              <span>{t.pdf_Coffee}</span>
+            </a>
+
           </div>
           <div className="relative group">
             <img 
@@ -128,6 +144,14 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
                 </li>
               ))}
             </ul>
+            <a 
+              href={pdf_Art}
+              target='blank'
+              className="inline-flex w-fit group relative items-center gap-3 px-6 py-5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-2xl shadow-primary/40 transition-all transform hover:-translate-y-1 active:scale-95 text-base "
+            >
+              <Download size={24} className="group-hover:animate-bounce" />
+              <span>{t.pdf_Art}</span>
+            </a>
           </div>
         </div>
       </section>
@@ -150,14 +174,6 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
               <Download size={24} className="group-hover:animate-bounce" />
               <span>{t.download}</span>
             </a>
-            
-            <button 
-              onClick={() => window.open(pdfLink, '_blank')}
-              className="flex items-center gap-3 px-10 py-6 border-2 border-slate-200 text-slate-600 font-bold rounded-2xl hover:bg-slate-100 hover:border-slate-300 transition-all active:scale-95"
-            >
-              <FileText size={20} />
-              <span>{t.preview}</span>
-            </button>
           </div>
         </div>
       </section>
