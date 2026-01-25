@@ -12,7 +12,6 @@ interface NavbarProps {
 }
 
 
-
 const Navbar: React.FC<NavbarProps> = ({ currentView, setView, lang, setLang }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, setView, lang, setLang }) 
           
           <button onClick={() => handleNavClick('home')} className="flex items-center gap-3 group text-left">
             <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
-               <img src='../public/hyd-logo-transparent.png' alt="H&D Alianzas Logo" className="w-full h-full object-contain rounded-lg" />
+               <img src='images/hyd-logo-transparent.png' alt="H&D Alianzas Logo" className="w-full h-full object-contain rounded-lg" />
             </div>
             <div className="hidden sm:block">
               <h1 className={`text-lg font-bold tracking-tight leading-none transition-colors ${textColor}`}>

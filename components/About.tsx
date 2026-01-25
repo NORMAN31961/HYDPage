@@ -35,7 +35,7 @@ const About: React.FC<AboutProps> = ({ onNavigate, lang }) => {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center mb-12">
           <div className="w-32 h-32 bg-white flex items-center justify-center rounded-2xl shadow-[0_0_50px_rgba(255,255,255,0.1)] transform hover:scale-105 transition-transform duration-500 overflow-hidden">
-             <img src='../public/hyd-logo-transparent.png' alt="" className="w-full h-full object-contain p-2" />
+             <img src='images/hyd-logo-transparent.png' alt="" className="w-full h-full object-contain p-2" />
           </div>
         </div>
 
