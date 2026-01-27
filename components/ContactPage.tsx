@@ -16,7 +16,7 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
   const [showDiagnostics, setShowDiagnostics] = useState(false);
 
   // URL del Webhook actualizada según la petición del usuario
-  const webhookUrl = 'http://141.148.7.237:5678/webhook-test/dbafdff4-7eaf-4b17-9380-c7e6453f7dbb';
+  const webhookUrl = 'https://jean8n.duckdns.org/webhook-test/dbafdff4-7eaf-4b17-9380-c7e6453f7dbb';
 
   const t = {
     es: {
