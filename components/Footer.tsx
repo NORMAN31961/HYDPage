@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import { ViewType, LanguageType } from '../App';
 
 interface FooterProps {
