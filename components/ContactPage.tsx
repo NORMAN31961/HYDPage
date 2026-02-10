@@ -144,15 +144,19 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
             <div className="space-y-10">
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><MapPin size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.office}</h4><p className="text-slate-500">Calle 100 # 15-23, Edificio Trade Center, Bogotá, Col</p></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.office}</h4><p className="text-slate-500">Bogotá, Colombia</p></div>
               </div>
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><Phone size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.phones}</h4><p className="text-slate-500">+57 (300) 123-4567</p><p className="text-slate-400 text-xs mt-1 font-bold uppercase tracking-wider">{t.hours}</p></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.phones}</h4>
+                <p className="text-slate-500">+57 (315) 9946086</p>
+                <p className="text-slate-500">+1 (000) 00000</p>
+                <p className="text-slate-400 text-xs mt-1 font-bold uppercase tracking-wider">{t.hours}</p></div>
               </div>
+              
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><Mail size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.email}</h4><p className="text-slate-500">comercioexterior@hdalianzas.com</p></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.email}</h4><p className="text-slate-500">Ronaldandica@gmail.com</p></div>
               </div>
             </div>
           </div>

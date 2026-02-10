@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
       guide: 'Guía de Exportación',
       about: 'Sobre Nosotros',
       contactTitle: 'CONTACTO',
-      address: 'Calle Principal 123, Zona de Exportación,\nCiudad, País',
+      address: 'Bogotá, Colombia',
       rights: '© 2023 H&D Alianzas. Todos los derechos reservados.'
     },
     en: {
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
       guide: 'Export Guide',
       about: 'About Us',
       contactTitle: 'CONTACT',
-      address: '123 Main Street, Export Zone,\nCity, Country',
+      address: 'Bogotá, Colombia',
       rights: '© 2023 H&D Alianzas. All rights reserved.'
     }
   }[lang];
@@ -49,7 +49,6 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
             <div className="flex space-x-5 pt-4">
               <a href="#" className="text-slate-400 hover:text-white"><Facebook size={20} /></a>
               <a href="#" className="text-slate-400 hover:text-white"><Instagram size={20} /></a>
-              <a href="#" className="text-slate-400 hover:text-white"><Linkedin size={20} /></a>
             </div>
           </div>
 
@@ -72,11 +71,14 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
               </li>
               <li className="flex items-center gap-4">
                 <Mail size={18} className="text-primary shrink-0" />
-                <a href="mailto:info@hdalianzas.com">info@hdalianzas.com</a>
+                <a href="mailto:Ronaldandica@gmail.com">Ronaldandica@gmail.com</a>
               </li>
               <li className="flex items-center gap-4">
                 <Phone size={18} className="text-primary shrink-0" />
-                <a href="tel:+12345678900">+1 234 567 8900</a>
+                <div className="flex flex-col">
+                  <a href="tel:+573159946086">+57 (315) 9946086</a>
+                  <a href="tel:+100000000">+1 (000) 00000</a>
+                </div>
               </li>
             </ul>
           </div>

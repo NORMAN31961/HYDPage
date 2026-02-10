@@ -11,9 +11,8 @@ interface LogisticsProps {
 const Logistics: React.FC<LogisticsProps> = ({ onNavigate, lang }) => {
   const t = {
     es: {
-      tag: 'LOGÍSTICA DE ÉLITE',
-      title: 'Sin fronteras para',
-      titleAccent: 'tus negocios',
+      title: 'Logística Global de Élite',
+      titleAccent: 'Para tus negocios',
       desc: 'H&D Alianzas es tu departamento de comercio exterior. Gestionamos desde la recolección en origen hasta la entrega final en puerto internacional.',
       air: 'Envíos Express Aéreos',
       airDesc: 'Soluciones rápidas para muestras y pedidos de alto valor a partir de 50kg con tiempos de tránsito optimizados.',
@@ -22,9 +21,8 @@ const Logistics: React.FC<LogisticsProps> = ({ onNavigate, lang }) => {
       cta: 'VER DETALLES DE EXPORTACIÓN'
     },
     en: {
-      tag: 'ELITE LOGISTICS',
-      title: 'No borders for',
-      titleAccent: 'your business',
+      title: 'Elite Global Logistics',
+      titleAccent: 'For your business',
       desc: 'H&D Alianzas is your foreign trade department. We manage from collection at origin to final delivery at international ports.',
       air: 'Express Air Shipping',
       airDesc: 'Fast solutions for samples and high-value orders from 50kg with optimized transit times.',
@@ -48,8 +46,7 @@ const Logistics: React.FC<LogisticsProps> = ({ onNavigate, lang }) => {
 
           <div className="w-full lg:w-1/2 animate-fade-right">
             <div className="space-y-2 mb-8">
-              <span className="text-[11px] font-bold tracking-[0.3em] text-blue-600 uppercase block">{t.tag}</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-slate-900 dark:text-white leading-[1.1]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-slate-900 dark:text-white leading-[1.1]">
                 {t.title} <br /><span className="text-blue-500/80">{t.titleAccent}</span>
               </h2>
             </div>
