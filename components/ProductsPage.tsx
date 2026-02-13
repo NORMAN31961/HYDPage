@@ -21,12 +21,28 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       coffeeTitle: 'Cafés de Especialidad',
       coffeeDesc: (
         <>
-          Manejamos granos provenientes de la comunidad indigena <strong className="font-black text-slate-900">UMBRA GUAQUEMARAE</strong> y son sembrados a el rededor de la colina de la diosa <strong className="font-black text-slate-900">MICHUA</strong> ubicada a 1700 pies de altura, con una tasa de calidad puntaje 85 dandole a el cafe una exclusividad en su sabor y aroma y proceso de cultivos y recoleccion.
+          <p>
+            Trabajamos con granos cultivados por la comunidad indígena <strong className="font-black text-slate-900">UMBRA GUAQUEMARAE</strong>, sembrados alrededor de la colina sagrada de la diosa <strong className="font-black text-slate-900">MICHUA</strong>, ubicada a 1700 pies de altura.
+          </p>
+          <br />
+          <p>
+            Nuestros cafés alcanzan un puntaje de calidad de <strong className="font-black text-slate-900">85 puntos</strong>, lo que les otorga un perfil exclusivo en sabor y aroma. Cada etapa —desde el cultivo hasta la recolección— se realiza mediante procesos cuidadosos y tradicionales, garantizando un producto auténtico, de origen y con identidad propia.
+          </p>
         </>
       ),
       coffeeList: ['Origen Huila & Nariño', 'Certificaciones Orgánicas', 'Tueste Personalizado para Exportación'],
       artTitle: 'Arte y Cultura Indígena',
-      artDesc: 'Representamos la autenticidad de las mujeres que fueron victimas de violencia y plasman su esperanza, resistencia y dolor. En cada pieza es un testimonio de libertad y esperanza, en su diseño como en su arte.',
+      artDesc: ( 
+        <>
+          <p>
+            Representamos la autenticidad y la fuerza de mujeres que han sido víctimas de violencia, quienes transforman su dolor en esperanza y resiliencia.
+          </p>
+          <br />
+          <p>
+            Cada pieza es un testimonio de libertad, resistencia y renacimiento; una expresión viva que se refleja tanto en su diseño como en su arte, llevando consigo una historia de valentía y transformación.
+          </p>
+        </>
+      ),
       artList: ['Mochilas Wayuu de Edición Limitada', 'Artesanías en Madera de Cafeto', 'Joyas Ancestrales Tejidas'],
       catTitle: 'Descargue el Catálogo Maestro',
       catDesc: 'Hemos consolidado toda nuestra oferta exportable en un documento detallado. Encuentre fichas técnicas, perfiles de taza y disponibilidad de artesanías.',
@@ -46,12 +62,28 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       coffeeTitle: 'Specialty Coffees',
       coffeeDesc: (
         <>
-          We source beans from the <strong className="font-black text-slate-900">UMBRA GUAQUEMARAE</strong> indigenous community, grown around the hill of the goddess <strong className="font-black text-slate-900">MICHUA</strong> at 1,700 feet. With a quality score of 85, this coffee offers exclusive flavor and aroma, achieved through unique cultivation and harvesting processes.
+          <p>
+            We work with beans cultivated by the indigenous community <strong className="font-black text-slate-900">UMBRA GUAQUEMARAE</strong>, grown around the sacred hill of the goddess <strong className="font-black text-slate-900">MICHUA</strong>, located at 1,700 feet above sea level.
+          </p>
+          <br />
+          <p>
+            Our coffees achieve a quality score of <strong className="font-black text-slate-900">85 points</strong>, giving them an exclusive flavor and aroma profile. Every stage — from cultivation to harvesting — is carried out through careful and traditional processes, ensuring an authentic product with true origin and a distinctive identity.
+          </p>
         </>
       ),
       coffeeList: ['Huila & Nariño Origin', 'Organic Certifications', 'Custom Roasting for Export'],
       artTitle: 'Indigenous Art and Culture',
-      artDesc: 'We represent the authenticity of Wayuu communities and craftsmen from the Coffee Region. Each piece is a testimony of cultural heritage, hand-woven and carved with sustainable materials.',
+      artDesc: (
+        <>
+          <p>
+            We represent the authenticity and strength of women who have been victims of violence, transforming their pain into hope and resilience.
+          </p>
+          <br />
+          <p>
+            Each piece is a testament to freedom, resistance, and rebirth; a living expression reflected in both its design and its artistry, carrying with it a story of courage and transformation.
+          </p>
+        </>
+      ),
       artList: ['Limited Edition Wayuu Bags', 'Coffee Wood Crafts', 'Ancestral Woven Jewelry'],
       catTitle: 'Download the Master Catalog',
       catDesc: 'We represent the authenticity of women who have been victims of violence, embodying their hope, resilience, and pain. Each piece is a testament to freedom and hope, both in its design and artistry.',

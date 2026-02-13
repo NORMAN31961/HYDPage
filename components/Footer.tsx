@@ -71,7 +71,7 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
               </li>
               <li className="flex items-center gap-4">
                 <Mail size={18} className="text-primary shrink-0" />
-                <a href="mailto:Ronaldandica@gmail.com">Ronaldandica@gmail.com</a>
+                <a href="mailto:servicioalcliente@hydalianzas.com.co">servicioalcliente@hydalianzas.com.co</a>
               </li>
               <li className="flex items-center gap-4">
                 <Phone size={18} className="text-primary shrink-0" />

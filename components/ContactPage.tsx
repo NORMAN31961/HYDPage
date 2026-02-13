@@ -156,7 +156,7 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
               
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><Mail size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.email}</h4><p className="text-slate-500">Ronaldandica@gmail.com</p></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.email}</h4><p className="text-slate-500">servicioalcliente@hydalianzas.com.co</p></div>
               </div>
             </div>
           </div>
