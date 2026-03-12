@@ -71,13 +71,12 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
               </li>
               <li className="flex items-center gap-4">
                 <Mail size={18} className="text-primary shrink-0" />
-                <a href="mailto:Ronaldandica@gmail.com">Ronaldandica@gmail.com</a>
+                <a href="mailto:servicioalcliente@hydalianzas.com.co">servicioalcliente@hydalianzas.com.co</a>
               </li>
               <li className="flex items-center gap-4">
                 <Phone size={18} className="text-primary shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:+573159946086">+57 (315) 9946086</a>
-                  <a href="tel:+100000000">+1 (000) 00000</a>
+                  <a href="tel:+100000000">+1 (818) 912-8127</a>
                 </div>
               </li>
             </ul>

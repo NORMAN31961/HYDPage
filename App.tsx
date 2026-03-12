@@ -16,14 +16,39 @@ export type ViewType = 'home' | 'products' | 'export' | 'about' | 'contact';
 export type LanguageType = 'es' | 'en';
 
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<ViewType>('home');
-  // Se establece el inglés ('en') como el idioma inicial por defecto
+  const [currentView, setCurrentView] = useState<ViewType>(() => {
+    // Intentar leer la vista desde el hash de la URL al cargar
+    const hash = window.location.hash.replace('#', '');
+    const validViews: ViewType[] = ['home', 'products', 'export', 'about', 'contact'];
+    return validViews.includes(hash as ViewType) ? (hash as ViewType) : 'home';
+  });
   const [language, setLanguage] = useState<LanguageType>('en');
 
-  // Volver al inicio del scroll cuando cambia la vista
+  // Sincronizar el estado con la URL
   useEffect(() => {
+    if (currentView === 'home') {
+      window.history.replaceState(null, '', window.location.pathname);
+    } else {
+      window.location.hash = currentView;
+    }
     window.scrollTo(0, 0);
   }, [currentView]);
+
+  // Escuchar cambios en el historial (botón atrás/adelante del navegador)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      const validViews: ViewType[] = ['home', 'products', 'export', 'about', 'contact'];
+      if (validViews.includes(hash as ViewType)) {
+        setCurrentView(hash as ViewType);
+      } else if (!hash) {
+        setCurrentView('home');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const renderContent = () => {
     switch (currentView) {
@@ -51,17 +76,17 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-h-surface transition-colors duration-300">
-      <Navbar 
-        currentView={currentView} 
-        setView={setCurrentView} 
-        lang={language} 
-        setLang={setLanguage} 
+      <Navbar
+        currentView={currentView}
+        setView={setCurrentView}
+        lang={language}
+        setLang={setLanguage}
       />
       <main className="animate-fade-in-content" key={language}>
         {renderContent()}
       </main>
       <Footer setView={setCurrentView} lang={language} />
-      
+
       <style>{`
         @keyframes fade-in-content {
           from { opacity: 0; transform: translateY(10px); }

@@ -16,7 +16,11 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       heroTag: 'Nuestra Historia',
       title: 'H&D ALIANZAS',
       subtitle: 'Sembrando esperanza, exportando sueños desde 2016.',
-      p1: 'H&D Alianzas (HOPE AND DREAMS) fue fundada en 2016 por dos emprendedores colombo-americanos apasionados por empoderar a comunidades vulnerables ricas en cultura y recursos. Hemos establecido una asociación estratégica con la Comunidad Indígena Umbre Guaquemarae y la Fundación Arropame.',
+      p1: (
+        <>
+          H&D Alianzas (HOPE AND DREAMS) fue fundada en 2016 por dos emprendedores colombo-americanos apasionados por empoderar a comunidades vulnerables ricas en cultura y recursos. Hemos establecido una asociación estratégica con la Comunidad Indígena <strong className="font-black text-slate-900">Umbra Guaquemarae</strong> y la Fundación Arropame.
+        </>
+      ),
       p2: 'Nuestras alianzas nos permiten ofrecer productos de alta calidad, incluyendo café colombiano premium y artículos artesanales elaborados con amor por mujeres emprendedoras.',
       missionTitle: 'Misión',
       missionText: 'Nuestra misión es empoderar a las comunidades vulnerables de Colombia mediante la promoción y celebración de su rico patrimonio cultural y sus valiosos recursos. A través de alianzas estratégicas, buscamos brindarles las herramientas y oportunidades necesarias para producir productos de alta calidad que puedan competir en el mercado internacional. Al apoyar el desarrollo sostenible de las pequeñas y medianas empresas, no solo contribuimos a impulsar las economías locales, sino también a la preservación de las tradiciones y prácticas únicas que definen a estas comunidades. Juntos, podemos crear un futuro más prometedor que honre tanto a la gente como a la tierra de Colombia, a la vez que fomentamos las conexiones globales.',
@@ -37,7 +41,11 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       heroTag: 'Our Story',
       title: 'H&D ALIANZAS',
       subtitle: 'Sowing hope, exporting dreams since 2016.',
-      p1: 'H&D Alianzas (HOPE AND DREAMS) was founded in 2016 by two Colombian-American entrepreneurs passionate about empowering vulnerable communities rich in culture and resources. We’ve established strategic partnerships with the Umbre Guaquemarae Indigenous Community and Fundación Arropame.',
+      p1: (
+        <>
+          H&D Alianzas (HOPE AND DREAMS) was founded in 2016 by two Colombian-American entrepreneurs passionate about empowering vulnerable communities rich in culture and resources. We’ve established strategic partnerships with the <strong className="font-black text-slate-900">Umbra Guaquemarae</strong> Indigenous Community and Fundación Arropame.
+        </>
+      ),
       p2: 'Our alliances enable us to offer high-quality products, including premium Colombian coffee and artisanal goods crafted with love by women entrepreneurs.',
       missionTitle: 'Mission',
       missionText: 'Our mission is to empower vulnerable communities in Colombia by promoting and celebrating their rich cultural heritage and valuable resources. Through strategic partnerships, we aim to provide these communities with the tools and opportunities needed to produce high-quality products that can compete in the international market. By supporting the sustainable development of small and medium-sized businesses, we not only help uplift local economies but also contribute to the preservation of unique traditions and practices that define these communities. Together, we can create a brighter future that honors both the people and the land of Colombia while fostering global connections.',
@@ -61,8 +69,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       {/* Hero Section for About Us */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=2000" 
+          <img
+            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=2000"
             className="w-full h-full object-cover"
             alt="Colombian landscape"
           />
@@ -85,8 +93,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2 relative">
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl animate-fade-left">
-              <img 
-                src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?auto=format&fit=crop&q=80&w=1000" 
+              <img
+                src="public/images/aboutus.png"
                 alt="Coffee production"
                 className="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105"
               />
@@ -154,8 +162,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {t.values.map((value, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="p-10 bg-white border border-slate-100 rounded-[2.5rem] text-center transition-all hover:bg-slate-50 hover:border-primary/20 animate-fade-up"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
@@ -179,12 +187,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
             {t.ctaDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-             <button 
-               onClick={onNavigate}
-               className="px-12 py-4 bg-white text-primary font-bold rounded-xl hover:shadow-2xl transition-all uppercase tracking-widest text-sm"
-             >
-               {t.ctaButton}
-             </button>
+            <button
+              onClick={onNavigate}
+              className="px-12 py-4 bg-white text-primary font-bold rounded-xl hover:shadow-2xl transition-all uppercase tracking-widest text-sm"
+            >
+              {t.ctaButton}
+            </button>
           </div>
         </div>
       </section>

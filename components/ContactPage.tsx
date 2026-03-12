@@ -26,7 +26,7 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
       infoDesc: 'Estamos listos para asesorarlo en su proceso de compra internacional. Especializados en logística de exportación y cumplimiento de estándares de calidad.',
       office: 'Oficina Principal',
       phones: 'Teléfonos',
-      hours: 'Lunes a Viernes, 8am - 6pm EST',
+      hours: '',
       email: 'Correo Electrónico',
       formTitle: 'Envíenos un Mensaje',
       name: 'Nombre',
@@ -53,7 +53,7 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
       infoDesc: 'We are ready to advise you on your international purchasing process. Specialized in export logistics and quality standards compliance.',
       office: 'Main Office',
       phones: 'Phones',
-      hours: 'Monday to Friday, 8am - 6pm EST',
+      hours: '',
       email: 'Email',
       formTitle: 'Send Us a Message',
       name: 'Name',
@@ -149,14 +149,13 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><Phone size={24} /></div>
                 <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.phones}</h4>
-                <p className="text-slate-500">+57 (315) 9946086</p>
-                <p className="text-slate-500">+1 (000) 00000</p>
-                <p className="text-slate-400 text-xs mt-1 font-bold uppercase tracking-wider">{t.hours}</p></div>
+                  <p className="text-slate-500">+1 (818) 912-8127</p>
+                  <p className="text-slate-400 text-xs mt-1 font-bold uppercase tracking-wider">{t.hours}</p></div>
               </div>
-              
+
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><Mail size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.email}</h4><p className="text-slate-500">Ronaldandica@gmail.com</p></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.email}</h4><p className="text-slate-500">servicioalcliente@hydalianzas.com.co</p></div>
               </div>
             </div>
           </div>
@@ -168,69 +167,68 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">{t.name}</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none" 
+                      className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">{t.lastName}</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="lastName"
                       required
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none" 
+                      className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none"
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">{t.corpEmail}</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none" 
+                    className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">{t.details}</label>
-                  <textarea 
+                  <textarea
                     name="details"
                     required
-                    rows={5} 
+                    rows={5}
                     value={formData.details}
                     onChange={handleInputChange}
-                    className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none resize-none" 
+                    className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none resize-none"
                     placeholder={t.placeholder}
                   ></textarea>
                 </div>
                 <div className="flex items-center gap-4 py-2">
-                  <input 
-                    type="checkbox" 
-                    id="privacy" 
+                  <input
+                    type="checkbox"
+                    id="privacy"
                     name="privacy"
                     required
                     checked={formData.privacy}
                     onChange={handleInputChange}
-                    className="w-5 h-5 text-blue-600 rounded-lg border-slate-200 cursor-pointer" 
+                    className="w-5 h-5 text-blue-600 rounded-lg border-slate-200 cursor-pointer"
                   />
                   <label htmlFor="privacy" className="text-sm text-slate-500 cursor-pointer select-none">{t.privacy}</label>
                 </div>
-                
-                <button 
+
+                <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className={`w-full py-5 text-white font-bold rounded-2xl shadow-xl transition-all active:scale-[0.98] text-sm uppercase tracking-[0.2em] flex items-center justify-center gap-3 ${
-                    status === 'loading' ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-                  }`}
+                  className={`w-full py-5 text-white font-bold rounded-2xl shadow-xl transition-all active:scale-[0.98] text-sm uppercase tracking-[0.2em] flex items-center justify-center gap-3 ${status === 'loading' ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+                    }`}
                 >
                   {status === 'loading' ? (
                     <>
@@ -268,9 +266,9 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
                           <p>{t.mixed}</p>
                         </div>
                         <div className="pt-2">
-                          <a 
-                            href={webhookUrl} 
-                            target="_blank" 
+                          <a
+                            href={webhookUrl}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
                           >
