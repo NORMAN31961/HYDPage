@@ -152,7 +152,7 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
             <div className="space-y-10">
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><User size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">C.O Dennis C. Guerrero</h4><p className="text-slate-500">{t.contactPerson}</p></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1"> Dennis C. Guerrero</h4><p className="text-slate-500">{t.contactPerson}</p></div>
               </div>
 
               <div className="flex items-start gap-6">
@@ -169,10 +169,6 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
                       <p className="text-slate-700 font-medium text-sm">California, USA</p>
                       <p className="text-slate-500 text-sm">11024 Balboa Blvd #1470</p>
                       <p className="text-slate-500 text-sm">Granada Hills, 91344</p>
-                    </div>
-                    <div>
-                      <p className="text-slate-700 font-medium text-sm">Colombia</p>
-                      <p className="text-slate-500 text-sm">Bogotá, Colombia</p>
                     </div>
                   </div>
                 </div>

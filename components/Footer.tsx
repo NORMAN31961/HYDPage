@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 import { ViewType, LanguageType } from '../App';
 
 interface FooterProps {
@@ -19,8 +19,8 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
       guide: 'Guía de Exportación',
       about: 'Sobre Nosotros',
       contactTitle: 'CONTACTO',
-      address: 'Bogotá, Colombia',
-      rights: '© 2023 H&D Alianzas. Todos los derechos reservados.'
+      address: 'Las Vegas, Nevada, USA',
+      rights: '© 2025 H&D Alianzas. Todos los derechos reservados.'
     },
     en: {
       tag: 'YOUR BEST BUSINESS ALLY',
@@ -31,8 +31,8 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
       guide: 'Export Guide',
       about: 'About Us',
       contactTitle: 'CONTACT',
-      address: 'Bogotá, Colombia',
-      rights: '© 2023 H&D Alianzas. All rights reserved.'
+      address: 'Las Vegas, Nevada, USA',
+      rights: '© 2025 H&D Alianzas. All rights reserved.'
     }
   }[lang];
 
@@ -46,10 +46,7 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
               <p className="text-[10px] text-primary font-bold tracking-[0.25em] uppercase">{t.tag}</p>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">{t.desc}</p>
-            <div className="flex space-x-5 pt-4">
-              <a href="#" className="text-slate-400 hover:text-white"><Facebook size={20} /></a>
-              <a href="#" className="text-slate-400 hover:text-white"><Instagram size={20} /></a>
-            </div>
+
           </div>
 
           <div className="md:col-span-3">
@@ -76,7 +73,7 @@ const Footer: React.FC<FooterProps> = ({ setView, lang }) => {
               <li className="flex items-center gap-4">
                 <Phone size={18} className="text-primary shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:+100000000">+1 (818) 912-8127</a>
+                  <a href="tel:+13234884161">1-323-488-4161</a>
                 </div>
               </li>
             </ul>

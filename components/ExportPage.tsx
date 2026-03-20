@@ -1,5 +1,5 @@
 import React from 'react';
-import { Package, FileText, Truck, Globe, Coffee, Palette, Scale } from 'lucide-react';
+import { Package, Truck, Globe, Coffee, Scale, ShieldCheck } from 'lucide-react';
 import { LanguageType } from '../App';
 
 interface ExportPageProps {
@@ -16,25 +16,22 @@ const ExportPage: React.FC<ExportPageProps> = ({ lang }) => {
       processTitle: 'Proceso de Exportación Paso a Paso',
       steps: [
         { title: "1. Selección y Empaque", desc: "Curaduría de café premium y artesanías. Embalaje especializado para proteger la integridad del producto." },
-        { title: "2. Trámites Aduaneros", desc: "Gestión documental completa: Certificados de origen, fitosanitarios y permisos de exportación." },
-        { title: "3. Logística y Carga", desc: "Transporte multimodal hacia puerto o aeropuerto. Consolidación de carga en contenedores seguros." },
-        { title: "4. Exportación Global", desc: "Envío internacional con seguimiento en tiempo real hasta el destino final de su negocio." }
+        { title: "2. Logística y Carga", desc: "Transporte multimodal hacia puerto o aeropuerto. Consolidación de carga en contenedores seguros." },
+        { title: "3. Exportación Global", desc: "Envío internacional con seguimiento en tiempo real hasta el destino final de su negocio." }
       ],
       reqTitle: 'Requisitos de',
       reqAccent: 'Volumen y Peso',
       reqDesc: 'Para garantizar la rentabilidad y eficiencia logística de su exportación, H&D Alianzas establece parámetros claros basados en el tipo de producto.',
       coffeeTitle: 'Exportación de Café',
-      coffeeSub: 'Café verde o tostado de origen.',
-      coffeeMin: 'Mínimo: 500 Kilogramos',
-      artTitle: 'Artesanías y Mixtos',
-      artSub: 'Artesanías indígenas y productos derivados del café.',
-      artMin: 'Mínimo: 100 Kilogramos (Consolidado)',
+      coffeeMin: 'Mínimo: 55 Libras',
       whyMin: '¿Por qué existe un mínimo?',
       whyDesc: 'Optimizar el espacio en contenedores reduce significativamente la huella de carbono y el costo por unidad para nuestros clientes.',
       lcl: 'LCL',
       lclDesc: 'Carga menor a contenedor',
       fcl: 'FCL',
-      fclDesc: 'Contenedor de carga completa'
+      fclDesc: 'Contenedor de carga completa',
+      partnersTitle: 'Nuestros Aliados Logísticos',
+      partnersDesc: 'Trabajamos con los líderes mundiales en logística y paquetería internacional para asegurar que su exportación llegue de manera rápida, segura y con seguimiento en tiempo real.'
     },
     en: {
       title: 'Your Bridge to',
@@ -44,25 +41,22 @@ const ExportPage: React.FC<ExportPageProps> = ({ lang }) => {
       processTitle: 'Step-by-Step Export Process',
       steps: [
         { title: "1. Selection and Packing", desc: "Curation of premium coffee and crafts. Specialized packaging to protect product integrity." },
-        { title: "2. Customs Procedures", desc: "Complete document management: Certificates of origin, phytosanitary, and export permits." },
-        { title: "3. Logistics and Cargo", desc: "Multimodal transport to port or airport. Consolidation of cargo in secure containers." },
-        { title: "4. Global Export", desc: "International shipping with real-time tracking to your business's final destination." }
+        { title: "2. Logistics and Cargo", desc: "Multimodal transport to port or airport. Consolidation of cargo in secure containers." },
+        { title: "3. Global Export", desc: "International shipping with real-time tracking to your business's final destination." }
       ],
       reqTitle: 'Volume and',
       reqAccent: 'Weight Requirements',
       reqDesc: 'To guarantee profitability and logistic efficiency of your export, H&D Alianzas establishes clear parameters based on the product type.',
       coffeeTitle: 'Coffee Export',
-      coffeeSub: 'Green or roasted origin coffee.',
-      coffeeMin: 'Minimum: 500 Kilograms',
-      artTitle: 'Crafts and Mixed',
-      artSub: 'Indigenous crafts and coffee-derived products.',
-      artMin: 'Minimum: 100 Kilograms (Consolidated)',
+      coffeeMin: 'Minimum: 55 Pounds',
       whyMin: 'Why is there a minimum?',
       whyDesc: 'Optimizing container space significantly reduces the carbon footprint and the cost per unit for our customers.',
       lcl: 'LCL',
       lclDesc: 'Less than Container Load',
       fcl: 'FCL',
-      fclDesc: 'Full Container Load'
+      fclDesc: 'Full Container Load',
+      partnersTitle: 'Our Logistics Partners',
+      partnersDesc: 'We work with global leaders in international logistics and shipping to ensure your export arrives quickly, safely, and with real-time tracking.'
     }
   }[lang];
 
@@ -70,10 +64,10 @@ const ExportPage: React.FC<ExportPageProps> = ({ lang }) => {
     <div className="pt-20 bg-[#F9FAFB] overflow-x-hidden">
       <header className="relative bg-white py-16 lg:py-24 overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-          <img 
-            alt="Shipping Containers" 
-            className="w-full h-full object-cover grayscale animate-subtle-scale" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY6ProSTTXm_7GhmT9rA_-RQrWxH7eoM1_IpPstsp1ltmYWrzOV4E8zgq_UNmoNEerwbvQNha6lvteC7Wn0VYQfwQjDptbQGpCgdW9BbB6a7Y2T1zcDx3RuRysQdfccC_s_pC6k6xoVdfm5uBR-xqTzoV6tbq4Fdm_fKgGRN_KsiX7txidPMWlgi8o8v-X9bjSsyKJrI70m1xpNUvD0r1NZG3Eu1cZ7FWXIWP1TzuJKaaM0i131LUA7WRaxSZ-WtLsx0UIRI9kiiE" 
+          <img
+            alt="Shipping Containers"
+            className="w-full h-full object-cover grayscale animate-subtle-scale"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY6ProSTTXm_7GhmT9rA_-RQrWxH7eoM1_IpPstsp1ltmYWrzOV4E8zgq_UNmoNEerwbvQNha6lvteC7Wn0VYQfwQjDptbQGpCgdW9BbB6a7Y2T1zcDx3RuRysQdfccC_s_pC6k6xoVdfm5uBR-xqTzoV6tbq4Fdm_fKgGRN_KsiX7txidPMWlgi8o8v-X9bjSsyKJrI70m1xpNUvD0r1NZG3Eu1cZ7FWXIWP1TzuJKaaM0i131LUA7WRaxSZ-WtLsx0UIRI9kiiE"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-fade-up">
@@ -92,12 +86,12 @@ const ExportPage: React.FC<ExportPageProps> = ({ lang }) => {
           </div>
           <div className="relative">
             <div className="hidden lg:block absolute left-0 right-0 top-1/2 h-1 bg-gray-200 -translate-y-1/2 z-0 mx-20 rounded-full"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 relative z-10">
               {t.steps.map((step, idx) => {
-                const icons = [<Package key="1" />, <FileText key="2" />, <Truck key="3" />, <Globe key="4" />];
+                const icons = [<Package key="1" />, <Truck key="2" />, <Globe key="3" />];
                 return (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hover:-translate-y-2 transition-all duration-300 animate-fade-up"
                     style={{ animationDelay: `${idx * 0.15}s` }}
                   >
@@ -128,16 +122,7 @@ const ExportPage: React.FC<ExportPageProps> = ({ lang }) => {
                   <div className="flex-shrink-0 mt-1 text-[#6F4E37]"><Coffee size={28} /></div>
                   <div className="ml-4">
                     <h4 className="text-lg font-bold text-gray-900">{t.coffeeTitle}</h4>
-                    <p className="mt-1 text-sm text-gray-500">{t.coffeeSub}</p>
                     <div className="mt-3 inline-block px-4 py-1.5 bg-[#6F4E37]/10 text-[#6F4E37] rounded-lg font-bold text-sm">{t.coffeeMin}</div>
-                  </div>
-                </div>
-                <div className="flex items-start bg-[#F9FAFB] p-6 rounded-xl border-l-4 border-[#0ea5e9] shadow-sm hover:translate-x-2 transition-transform duration-300">
-                  <div className="flex-shrink-0 mt-1 text-[#0ea5e9]"><Palette size={28} /></div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-bold text-gray-900">{t.artTitle}</h4>
-                    <p className="mt-1 text-sm text-gray-500">{t.artSub}</p>
-                    <div className="mt-3 inline-block px-4 py-1.5 bg-[#0ea5e9]/10 text-[#0ea5e9] rounded-lg font-bold text-sm">{t.artMin}</div>
                   </div>
                 </div>
               </div>
@@ -162,6 +147,36 @@ const ExportPage: React.FC<ExportPageProps> = ({ lang }) => {
           </div>
         </div>
       </section>
+
+      {/* SECCIÓN DE ALIADOS LOGÍSTICOS */}
+      <section className="py-16 bg-[#F9FAFB] border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-up">
+          <h3 className="font-sans text-3xl font-bold text-gray-900 mb-4">{t.partnersTitle}</h3>
+          <p className="text-gray-600 mb-12 text-lg max-w-3xl mx-auto">{t.partnersDesc}</p>
+
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 grayscale opacity-80 transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+            {/* DHL */}
+            <div className="text-5xl font-black italic tracking-tighter text-[#D40511] cursor-default drop-shadow-sm hover:scale-110 transition-transform">
+              DHL
+            </div>
+            {/* FedEx */}
+            <div className="text-5xl font-black tracking-tight cursor-default drop-shadow-sm hover:scale-110 transition-transform">
+              <span className="text-[#4D148C]">Fed</span><span className="text-[#FF6600]">Ex</span>
+            </div>
+            {/* Aduanas Generales */}
+            <div className="flex items-center gap-3 cursor-default drop-shadow-sm hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-full border-4 border-slate-300 flex items-center justify-center text-slate-600">
+                <ShieldCheck size={32} strokeWidth={2.5} />
+              </div>
+              <div className="flex flex-col text-left justify-center pt-1">
+                <span className="text-2xl font-black text-slate-700 uppercase tracking-tighter leading-none">Customs</span>
+                <span className="text-sm font-bold text-slate-400 uppercase tracking-widest leading-none mt-1">& Logistics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

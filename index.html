@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H&D Alianzas | Your Best Business Ally</title>
-    <link rel="icon" type="image/png" href="../images/hyd-logo-transparent.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="jRsvWspZRxZ7sSKObtSqffgN2Cr9iTzX0pi-i6GcJdU" />
+  <title>H&D Alianzas | Your Best Business Ally</title>
+  <link rel="icon" type="image/png" href="../images/hyd-logo-transparent.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
-    <!-- N8N chatbot -->
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style/style.css">
+  <!-- N8N chatbot -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css">
 
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: '#0ea5e9',
-              'primary-dark': '#0284c7',
-              'h-navy': '#0b1120',
-              'h-surface': '#f9fafb'
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'sans-serif'],
-              display: ['Playfair Display', 'serif']
-            }
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            'primary-dark': '#0284c7',
+            'h-navy': '#0b1120',
+            'h-surface': '#f9fafb'
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
           }
         }
       }
-    </script>
+    }
+  </script>
 
-    <style>
-      .hero-overlay {
-        background: linear-gradient(to right, rgba(26, 26, 58, 0.7) 0%, rgba(26, 26, 58, 0.4) 100%);
-      }
-      html { scroll-behavior: smooth; }
-    </style>
+  <style>
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(26, 26, 58, 0.7) 0%, rgba(26, 26, 58, 0.4) 100%);
+    }
 
-    <script type="importmap">
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script type="importmap">
     {
       "imports": {
         "vite": "https://esm.sh/vite@^7.3.1",
@@ -59,44 +66,13 @@
 
 <body class="bg-white text-slate-800 antialiased overflow-x-hidden">
 
-    <div id="root"></div>
+  <div id="root"></div>
 
-    <script type="module" src="/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
 
-    <!-- N8N Chatbot -->
-    <script type="module">
-      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  <!-- N8N Chatbot -->
 
-      createChat({
-        webhookUrl: 'https://jean8n.duckdns.org/webhook/7211f3d0-4ac3-478c-bb32-f6b5c54c4854/chat',
-        webhookConfig: {
-          method: 'POST',
-          headers: {}
-        },
-        target: '#n8n-chat',
-        mode: 'embedded',
-        chatInputKey: 'chatInput',
-        chatSessionKey: 'sessionId',
-        loadPreviousSession: true,
-        metadata: {},
-        showWelcomeScreen: false,
-        defaultLanguage: 'es',
-        initialMessages: [
-          'Hola ¡Bienvenido a H&D Alianzas!',
-          'Mi nombre es Gabriel. ¿En qué puedo ayudarte hoy?'
-        ],
-        i18n: {
-          es: {
-            title: 'Bienvenido a H&D Alianzas 🫱🏼‍🫲🏽',
-            subtitle: "Empieza un chat, estamos aquí para ayudarte.",
-            footer: '',
-            getStarted: 'New Conversation',
-            inputPlaceholder: 'Escribe tu mensaje...',
-          },
-        },
-        enableStreaming: false,
-      });
-    </script>
 
 </body>
+
 </html>

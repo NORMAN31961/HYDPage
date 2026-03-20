@@ -35,7 +35,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       ],
       ctaTitle: '¿Listo para ser parte de esta alianza global?',
       ctaDesc: 'Únase a nosotros en la misión de llevar el corazón de Colombia a cada rincón del mundo.',
-      ctaButton: 'Contactar ahora'
+      ctaButton: 'Contactar ahora',
+      certTitle: 'Certificaciones y Respaldo Legal',
+      certDesc: 'H&D Alianzas es una empresa legalmente constituida y avalada por las principales entidades comerciales.',
+      docs: [
+        { name: 'Certificado Cámara de Comercio', status: 'Verificado', empty: true }
+      ]
     },
     en: {
       heroTag: 'Our Story',
@@ -60,7 +65,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       ],
       ctaTitle: 'Ready to be part of this global alliance?',
       ctaDesc: 'Join us in the mission of bringing the heart of Colombia to every corner of the world.',
-      ctaButton: 'Contact now'
+      ctaButton: 'Contact now',
+      certTitle: 'Certifications and Legal Backing',
+      certDesc: 'H&D Alianzas is a legally constituted company officially endorsed by major commercial entities.',
+      docs: [
+        { name: 'Chamber of Commerce Certificate', status: 'Verified', empty: true }
+      ]
     }
   }[lang];
 
@@ -94,7 +104,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl animate-fade-left">
               <img
-                src="public/images/aboutus.png"
+                src="images/Aboutus.png"
                 alt="Coffee production"
                 className="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105"
               />
@@ -176,6 +186,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
           ))}
         </div>
       </section>
+
+      
 
       {/* Impact CTA */}
       <section className="py-20 bg-primary">
