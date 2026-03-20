@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Loader2, CheckCircle2, AlertCircle, Info, ExternalLink, User } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { LanguageType } from '../App';
 
 const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
@@ -15,8 +16,10 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [showDiagnostics, setShowDiagnostics] = useState(false);
 
-  // URL del Webhook actualizada para usar Formspree
-  const webhookUrl = 'https://formspree.io/f/mwvrngyr';
+  // Configuración de EmailJS - Llaves a reemplazar por el usuario
+  const EMAILJS_SERVICE_ID = 'service_7ragsep';
+  const EMAILJS_TEMPLATE_ID = 'template_08rvk5i'; // Reemplazar con el ID de tu plantilla
+  const EMAILJS_PUBLIC_KEY = 'tOHWXaItXCQ1FkKga';   // Reemplazar con tu Public Key
 
   const t = {
     es: {
@@ -86,22 +89,25 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
     setShowDiagnostics(false);
 
     try {
-      const response = await fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        mode: 'cors',
-        body: JSON.stringify({
-          ...formData,
-          submittedAt: new Date().toISOString(),
-          language: lang,
-          origin: window.location.origin
-        }),
-      });
+      // Preparamos los datos que EmailJS inyectará en la plantilla de correo
+      const templateParams = {
+        name: formData.name,
+        lastName: formData.lastName,
+        email: formData.email,
+        details: formData.details,
+        language: lang,
+        origin: window.location.origin,
+      };
 
-      if (response.ok) {
+      // Hacemos el envío usando EmailJS
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
         setStatus('success');
         setFormData({ name: '', lastName: '', email: '', details: '', privacy: false });
         setTimeout(() => setStatus('idle'), 5000);
@@ -293,7 +299,7 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
                         </div>
                         <div className="pt-2">
                           <a
-                            href={webhookUrl}
+                            href="https://dashboard.emailjs.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-all"
