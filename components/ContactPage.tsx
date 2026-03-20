@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Loader2, CheckCircle2, AlertCircle, Info, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Loader2, CheckCircle2, AlertCircle, Info, ExternalLink, User } from 'lucide-react';
 import { LanguageType } from '../App';
 
 const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
@@ -15,8 +15,8 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [showDiagnostics, setShowDiagnostics] = useState(false);
 
-  // URL del Webhook actualizada según la petición del usuario
-  const webhookUrl = 'https://jean8n.duckdns.org/webhook/dbafdff4-7eaf-4b17-9380-c7e6453f7dbb';
+  // URL del Webhook actualizada para usar Formspree
+  const webhookUrl = 'https://formspree.io/f/mwvrngyr';
 
   const t = {
     es: {
@@ -24,7 +24,8 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
       subtitle: 'Su aliado estratégico para la exportación de café de alta calidad y artesanías auténticas.',
       infoTitle: 'Información de Contacto',
       infoDesc: 'Estamos listos para asesorarlo en su proceso de compra internacional. Especializados en logística de exportación y cumplimiento de estándares de calidad.',
-      office: 'Oficina Principal',
+      contactPerson: 'Contacto Principal',
+      office: 'Oficinas',
       phones: 'Teléfonos',
       hours: '',
       email: 'Correo Electrónico',
@@ -51,7 +52,8 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
       subtitle: 'Your strategic ally for high-quality coffee export and authentic crafts.',
       infoTitle: 'Contact Information',
       infoDesc: 'We are ready to advise you on your international purchasing process. Specialized in export logistics and quality standards compliance.',
-      office: 'Main Office',
+      contactPerson: 'Main Contact',
+      office: 'Offices',
       phones: 'Phones',
       hours: '',
       email: 'Email',
@@ -143,13 +145,37 @@ const ContactPage: React.FC<{ lang: LanguageType }> = ({ lang }) => {
             </div>
             <div className="space-y-10">
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><MapPin size={24} /></div>
-                <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.office}</h4><p className="text-slate-500">Bogotá, Colombia</p></div>
+                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><User size={24} /></div>
+                <div><h4 className="font-bold text-slate-900 text-lg mb-1">C.O Dennis C. Guerrero</h4><p className="text-slate-500">{t.contactPerson}</p></div>
               </div>
+
+              <div className="flex items-start gap-6">
+                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><MapPin size={24} /></div>
+                <div>
+                  <h4 className="font-bold text-slate-900 text-lg mb-2">{t.office}</h4>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-slate-700 font-medium text-sm">Nevada, USA</p>
+                      <p className="text-slate-500 text-sm">3172 N Rainbow Blvd #290</p>
+                      <p className="text-slate-500 text-sm">Las Vegas NV 89108</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-700 font-medium text-sm">California, USA</p>
+                      <p className="text-slate-500 text-sm">11024 Balboa Blvd #1470</p>
+                      <p className="text-slate-500 text-sm">Granada Hills, 91344</p>
+                    </div>
+                    <div>
+                      <p className="text-slate-700 font-medium text-sm">Colombia</p>
+                      <p className="text-slate-500 text-sm">Bogotá, Colombia</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0 border border-slate-100"><Phone size={24} /></div>
                 <div><h4 className="font-bold text-slate-900 text-lg mb-1">{t.phones}</h4>
-                  <p className="text-slate-500">+1 (818) 912-8127</p>
+                  <p className="text-slate-500">1-323-488-4161</p>
                   <p className="text-slate-400 text-xs mt-1 font-bold uppercase tracking-wider">{t.hours}</p></div>
               </div>
 
