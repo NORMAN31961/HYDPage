@@ -40,6 +40,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       certDesc: 'H&D Alianzas es una empresa legalmente constituida y avalada por las principales entidades comerciales.',
       docs: [
         { name: 'Certificado Cámara de Comercio', status: 'Verificado', empty: true }
+      ],
+      certLogos: [
+        '/images/iqnet.png',
+        '/images/Captura_de_pantalla_2026-03-20_153422-removebg-preview.png',
+        '/images/Captura_de_pantalla_2026-03-20_153849-removebg-preview.png',
+        '/images/Captura_de_pantalla_2026-03-20_153853-removebg-preview.png',
+        '/images/Captura_de_pantalla_2026-03-20_153856-removebg-preview.png'
       ]
     },
     en: {
@@ -70,6 +77,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
       certDesc: 'H&D Alianzas is a legally constituted company officially endorsed by major commercial entities.',
       docs: [
         { name: 'Chamber of Commerce Certificate', status: 'Verified', empty: true }
+      ],
+      certLogos: [
+        '/images/iqnet.png',
+        '/images/Captura_de_pantalla_2026-03-20_153422-removebg-preview.png',
+        '/images/Captura_de_pantalla_2026-03-20_153849-removebg-preview.png',
+        '/images/Captura_de_pantalla_2026-03-20_153853-removebg-preview.png',
+        '/images/Captura_de_pantalla_2026-03-20_153856-removebg-preview.png'
       ]
     }
   }[lang];
@@ -187,9 +201,32 @@ const AboutPage: React.FC<AboutPageProps> = ({ lang, onNavigate }) => {
         </div>
       </section>
 
-      
+      {/* Certifications Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-sans font-bold text-slate-900 mb-4">{t.certTitle}</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">{t.certDesc}</p>
+          </div>
 
-      {/* Impact CTA */}
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+            {t.certLogos.map((logo, idx) => (
+              <div
+                key={idx}
+                className="w-32 md:w-44 h-24 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 transform hover:scale-110"
+              >
+                <img
+                  src={logo}
+                  alt={`Certification ${idx + 1}`}
+                  className="max-w-full max-h-full object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>      {/* Impact CTA */}
       <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-4xl font-sans font-bold text-white mb-8 leading-tight">
