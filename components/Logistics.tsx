@@ -15,7 +15,7 @@ const Logistics: React.FC<LogisticsProps> = ({ onNavigate, lang }) => {
       titleAccent: 'Para tus negocios',
       desc: 'H&D Alianzas es tu departamento de comercio exterior. Gestionamos desde la recolección en origen hasta la entrega final en puerto internacional.',
       air: 'Envíos Express Aéreos',
-      airDesc: 'Soluciones rápidas para muestras y pedidos de alto valor a partir de 50kg con tiempos de tránsito optimizados.',
+      airDesc: 'Soluciones rápidas para muestras y pedidos de alto valor a partir de 55 libras con tiempos de tránsito optimizados.',
       customs: 'Expertos en Aduanas',
       customsDesc: 'Control total de certificados fitosanitarios (ICA/INVIMA) y toda la documentación legal para evitar retrasos.',
       cta: 'VER DETALLES DE EXPORTACIÓN'
@@ -25,7 +25,7 @@ const Logistics: React.FC<LogisticsProps> = ({ onNavigate, lang }) => {
       titleAccent: 'For your business',
       desc: 'H&D Alianzas is your foreign trade department. We manage from collection at origin to final delivery at international ports.',
       air: 'Express Air Shipping',
-      airDesc: 'Fast solutions for samples and high-value orders from 50kg with optimized transit times.',
+      airDesc: 'Fast solutions for samples and high-value orders from 55 pounds with optimized transit times.',
       customs: 'Customs Experts',
       customsDesc: 'Full control of phytosanitary certificates (ICA/INVIMA) and all legal documents to avoid delays.',
       cta: 'VIEW EXPORT DETAILS'

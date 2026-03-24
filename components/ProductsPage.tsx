@@ -141,6 +141,29 @@ const ImageCarousel = ({ images, alt, className = "" }: { images: string[], alt:
 };
 
 const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
+  const [galleryFullscreenIndex, setGalleryFullscreenIndex] = useState<number | null>(null);
+
+  const galleryImages = [
+    '../images/indigenas/Indigenas_(1).jpeg',
+    '../images/indigenas/Indigenas_(2).jpeg',
+    '../images/indigenas/Indigenas_(3).jpeg',
+    '../images/indigenas/Indigenas_(4).jpeg',
+    '../images/indigenas/Indigenas_(5).jpeg'
+  ];
+
+  useEffect(() => {
+    if (galleryFullscreenIndex === null) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setGalleryFullscreenIndex(null);
+      if (e.key === 'ArrowRight') setGalleryFullscreenIndex((prev) => prev !== null ? (prev + 1) % galleryImages.length : 0);
+      if (e.key === 'ArrowLeft') setGalleryFullscreenIndex((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : 0);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [galleryFullscreenIndex, galleryImages.length]);
+
   const pdf_Art = "https://drive.google.com/file/d/1Mu5WxHir2h39_2oSiXrKNVb9yH9KuPUC/view?usp=drive_link";
 
   const t = {
@@ -163,7 +186,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       ),
       coffeeList: ['Origen Quinchia Risaralda', 'Variedad Castillo', 'Tueste Personalizado para Exportación', 'Orden minima 22.68kg'],
       artTitle: 'Arte y Cultura Indígena',
-      artDesc: ( 
+      artDesc: (
         <>
           <p>
             Representamos la autenticidad y la fuerza de mujeres que han sido víctimas de violencia, quienes transforman su dolor en esperanza y resiliencia.
@@ -183,7 +206,9 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       ctaDesc: 'Si requiere una ficha técnica específica o personalización de marca, contáctenos directamente.',
       ctaBtn: 'HABLAR CON UN ASESOR COMERCIAL',
       pdf_Coffee: 'MAS PRODUCTOS',
-      pdf_Art: 'MAS PRODUCTOS'
+      pdf_Art: 'MAS PRODUCTOS',
+      galleryTitle: 'Nuestra Comunidad Indígena',
+      galleryDesc: 'Un vistazo a los paisajes y la cultura que dan vida a nuestro arte y café.'
     },
     en: {
       tag: 'EXCLUSIVE PORTFOLIO',
@@ -224,7 +249,9 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
       ctaDesc: 'If you require a specific data sheet or brand customization, contact us directly.',
       ctaBtn: 'TALK TO A SALES ADVISOR',
       pdf_Coffee: 'MORE PRODUCTS',
-      pdf_Art: 'MORE PRODUCTS'
+      pdf_Art: 'MORE PRODUCTS',
+      galleryTitle: 'Our Indigenous Community',
+      galleryDesc: 'A glimpse into the landscapes and culture that bring our art and coffee to life.'
     }
   }[lang];
 
@@ -318,6 +345,39 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
         </div>
       </section>
 
+      {/* Indigenous Community Photo Gallery (Masonry Layout) */}
+      <section className="py-24 bg-[#F9FAFB] border-t border-slate-100 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-0"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-slate-900 mb-6">{t.galleryTitle}</h2>
+            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t.galleryDesc}</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
+            {galleryImages.map((src, idx) => (
+              <div
+                key={idx}
+                className={`overflow-hidden rounded-2xl shadow-lg relative group animate-fade-up cursor-pointer ${idx === 2 ? 'sm:col-span-2 lg:col-span-1 lg:row-span-2' : ''
+                  }`}
+                style={{ animationDelay: `${idx * 0.15}s` }}
+                onClick={() => setGalleryFullscreenIndex(idx)}
+              >
+                <img
+                  src={src}
+                  alt={`Community gallery ${idx + 1}`}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-900 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-white text-2xl font-bold mb-4">{t.ctaTitle}</h3>
@@ -330,6 +390,48 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ lang, onNavigate }) => {
           </button>
         </div>
       </section>
+
+      {/* Modal de Pantalla Completa para Galería */}
+      {galleryFullscreenIndex !== null && typeof document !== 'undefined' && createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-sm animate-fade-in">
+          <button
+            onClick={() => setGalleryFullscreenIndex(null)}
+            className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-50"
+          >
+            <X size={28} />
+          </button>
+          <div className="relative w-full h-full p-4 md:p-12 flex items-center justify-center" onClick={() => setGalleryFullscreenIndex(null)}>
+            <img
+              src={galleryImages[galleryFullscreenIndex]}
+              alt={`Gallery Expanded`}
+              className="max-w-[90vw] max-h-[80vh] md:max-w-[85vw] md:max-h-[85vh] w-auto h-auto object-contain rounded-lg shadow-2xl animate-scale-up cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+          <button
+            onClick={(e) => { e.stopPropagation(); setGalleryFullscreenIndex((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : 0); }}
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all"
+          >
+            <ChevronLeft size={32} />
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); setGalleryFullscreenIndex((prev) => prev !== null ? (prev + 1) % galleryImages.length : 0); }}
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all"
+          >
+            <ChevronRight size={32} />
+          </button>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+            {galleryImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setGalleryFullscreenIndex(idx)}
+                className={`w-3 h-3 rounded-full transition-all ${idx === galleryFullscreenIndex ? 'bg-white scale-125' : 'bg-white/30 hover:bg-white/60'}`}
+              />
+            ))}
+          </div>
+        </div>,
+        document.body
+      )}
     </div>
   );
 };

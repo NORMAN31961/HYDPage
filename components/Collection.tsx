@@ -15,8 +15,8 @@ const Collection: React.FC<CollectionProps> = ({ onNavigate, lang }) => {
       titleItalic: 'Sello de Excelencia',
       coffee: 'Café de Especialidad',
       coffeeDesc: 'Granos con trazabilidad completa y perfiles sensoriales superiores de 85+ puntos SCA.',
-      crafts: 'Artesanías de Madera',
-      craftsDesc: 'Creaciones elaboradas por maestros artesanos utilizando madera de cafeto reciclada.',
+      crafts: 'Artesanías a Base de Café',
+      craftsDesc: 'Creaciones elaboradas por comunidades indígenas utilizando los residuos del café.',
       cta: 'VER CATÁLOGO COMPLETO'
     },
     en: {
@@ -25,15 +25,15 @@ const Collection: React.FC<CollectionProps> = ({ onNavigate, lang }) => {
       titleItalic: 'Seal of Excellence',
       coffee: 'Specialty Coffee',
       coffeeDesc: 'Full traceability beans and superior sensory profiles of 85+ SCA points.',
-      crafts: 'Wooden Crafts',
-      craftsDesc: 'Creations made by master craftsmen using recycled coffee wood.',
+      crafts: 'Coffee Crafts',
+      craftsDesc: 'Creations made by indigenous communities using coffee residue.',
       cta: 'VIEW FULL CATALOG'
     }
   }[lang];
 
   const products = [
     { title: t.coffee, description: t.coffeeDesc, image: '../images/cafe2.jpg' },
-    { title: t.crafts, description: t.craftsDesc, image: '../images/artesania2.jpg' }
+    { title: t.crafts, description: t.craftsDesc, image: '../images/Gato.png' }
   ];
 
   return (
